@@ -1,12 +1,13 @@
 {
   "name": "tyml-lsp-vscode",
-  "displayName": "TYML LSP Server for VSCode",
+  "displayName": "TYML for VSCode",
   "description": "Language server of TYML",
   "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/tyml-org/tyml-lsp-vscode"
   },
+  "publisher": "bea4dev",
   "engines": {
     "vscode": "^1.99.0"
   },
