@@ -7,9 +7,14 @@ import * as vscode from 'vscode';
 
 let client: LanguageClient;
 export function activate(context: vscode.ExtensionContext) {
-  const serverExe = context.asAbsolutePath(
-    path.join('server', process.platform === 'win32' ? 'tyml-lsp-server.exe' : 'tyml-lsp-server')
-  );
+  var serverExe;
+  if (process.platform === "win32") {
+    serverExe = context.asAbsolutePath(path.join('server', "tyml-lsp-server-windows-x86_64.exe"));
+  } else if (process.platform === "darwin") {
+    serverExe = context.asAbsolutePath(path.join('server', "tyml-lsp-server-macos-aarch64"));
+  } else {
+    serverExe = context.asAbsolutePath(path.join('server', "tyml-lsp-server-linux-x86_64"));
+  }
 
   const serverOptions: ServerOptions = {
     run:   { command: serverExe, transport: TransportKind.stdio },
