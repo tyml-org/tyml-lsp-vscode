@@ -1,0 +1,18 @@
+{
+    "iconDefinitions": {
+        "_tyml": {
+            "iconPath": "../media/file.png"
+        }
+    },
+    "fileExtensions": {
+        "tyml": "_tyml"
+    },
+    "fileNames": {
+        "TYML_CONFIG": "_tyml"
+    },
+    "languageIds": {
+        "mylang": "_tyml"
+    },
+    "folderNames": {},
+    "folderExpanded": "_folder"
+}

@@ -2,11 +2,12 @@
   "name": "tyml-lsp-vscode",
   "displayName": "TYML for VSCode",
   "description": "Language server of TYML",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "repository": {
     "type": "git",
     "url": "https://github.com/tyml-org/tyml-lsp-vscode"
   },
+  "icon": "media/icon.png",
   "publisher": "bea4dev",
   "engines": {
     "vscode": "^1.99.0"
@@ -15,7 +16,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:tyml"
+    "onLanguage:tyml",
+    "onStartupFinished"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -30,6 +32,13 @@
         "aliases": [
           "TYML"
         ]
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "tyml-file-icons",
+        "label": "TYML File Icons",
+        "path": "fileicons/tyml-icon-theme.json"
       }
     ]
   },
@@ -46,7 +55,7 @@
     "check-types": "tsc --noEmit",
     "lint": "eslint src",
     "test": "vscode-test",
-    "postinstall": "node ./scripts/macos-fix-perms.js"
+    "postinstall": "node ./scripts/macos-fix-perms.cjs"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
