@@ -2,7 +2,7 @@
   "name": "tyml-lsp-vscode",
   "displayName": "TYML for VSCode",
   "description": "Language server of TYML",
-  "version": "0.0.8",
+  "version": "0.0.12",
   "repository": {
     "type": "git",
     "url": "https://github.com/tyml-org/tyml-lsp-vscode"
@@ -54,8 +54,7 @@
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "check-types": "tsc --noEmit",
     "lint": "eslint src",
-    "test": "vscode-test",
-    "postinstall": "node ./scripts/macos-fix-perms.cjs"
+    "test": "vscode-test"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
