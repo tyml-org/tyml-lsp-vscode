@@ -2,7 +2,7 @@
   "name": "tyml-lsp-vscode",
   "displayName": "TYML for VSCode",
   "description": "Language server of TYML",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "repository": {
     "type": "git",
     "url": "https://github.com/tyml-org/tyml-lsp-vscode"
@@ -31,14 +31,11 @@
         ],
         "aliases": [
           "TYML"
-        ]
-      }
-    ],
-    "iconThemes": [
-      {
-        "id": "tyml-file-icons",
-        "label": "TYML File Icons",
-        "path": "fileicons/tyml-icon-theme.json"
+        ],
+        "icon": {
+          "light": "./media/file.png",
+          "dark": "./media/file.png"
+        }
       }
     ]
   },
